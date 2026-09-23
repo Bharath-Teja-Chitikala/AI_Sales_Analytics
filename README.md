@@ -27,7 +27,7 @@ The main objectives of this project are:
 
 ## Project Structure
 
-````text
+```text
 AI_SALES_ASSISTANT/
 │
 ├── Database/
@@ -41,6 +41,10 @@ AI_SALES_ASSISTANT/
 │   │   ├── Orders_data_generator.py
 │   │   └── Product_data_generator.py
 │   │
+│   ├── analytics/
+│   │   ├── __init__.py
+│   │   └── sales_analytics.py
+│   │
 │   ├── ai_engine.py
 │   ├── app.py
 │   ├── config.py
@@ -50,6 +54,7 @@ AI_SALES_ASSISTANT/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+```
 
 ## Database
 
@@ -100,6 +105,29 @@ Order and OrderDetails relationship validation.
 Sales and revenue validation.
 
 This ensures that the generated data is correctly stored and maintains the expected database relationships.
+
+## Python Analytics Layer
+
+The project includes a reusable Python analytics layer that connects to SQL Server and performs sales analysis using pandas and SQL queries.
+
+The analytics module provides functions for:
+
+- Overall sales KPIs
+- Revenue analysis
+- Order analysis
+- Customer analysis
+- Product performance
+- Category performance
+- Payment method analysis
+- Order status analysis
+- Monthly sales analysis
+- Customer-level sales analysis
+
+The analytics functions are implemented in:
+
+`Python/analytics/sales_analytics.py`
+
+This layer is designed to provide reusable analytical functions for the future AI-powered sales assistant.
 
 ## AI Sales Analysis
 
@@ -161,9 +189,10 @@ The project is currently under active development.
 ## How to Run
 
 ### 1. Clone the repository
+
 ```bash
 git clone <repository-url>
-````
+```
 
 ### 2. Create and activate a virtual environment
 
